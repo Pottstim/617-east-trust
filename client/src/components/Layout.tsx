@@ -9,56 +9,44 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/">
-              <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <img src="/logo-nc.png" alt="617 East Trust" className="h-10 w-10" />
-                <div className="flex flex-col">
-                  <span className="font-bold text-xl text-foreground">617 EAST TRUST</span>
-                  <span className="text-xs text-muted-foreground">Accountability. Trust. Transparency.</span>
-                </div>
-              </a>
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img src="/logo-nc.png" alt="617 East Trust" className="h-10 w-10" />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl text-foreground">617 EAST TRUST</span>
+                <span className="text-xs text-muted-foreground">Accountability. Trust. Transparency.</span>
+              </div>
             </Link>
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-6">
-              <Link href="/">
-                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
-                  <span className="relative">
-                    Home
-                    <span className="absolute -top-1 -right-2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                  </span>
-                </a>
+              <Link href="/" className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
+                <span className="relative">
+                  Home
+                  <span className="absolute -top-1 -right-2 w-2 h-2 bg-blue-500 rounded-full"></span>
+                </span>
               </Link>
-              <Link href="/services">
-                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
-                  <span className="relative">
-                    Services
-                    <span className="absolute -top-1 -right-2 w-2 h-2 bg-yellow-500 rounded-full"></span>
-                  </span>
-                </a>
+              <Link href="/services" className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
+                <span className="relative">
+                  Services
+                  <span className="absolute -top-1 -right-2 w-2 h-2 bg-yellow-500 rounded-full"></span>
+                </span>
               </Link>
-              <Link href="/testimonials">
-                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
-                  <span className="relative">
-                    Testimonials
-                    <span className="absolute -top-1 -right-2 w-2 h-2 bg-purple-500 rounded-full"></span>
-                  </span>
-                </a>
+              <Link href="/testimonials" className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
+                <span className="relative">
+                  Testimonials
+                  <span className="absolute -top-1 -right-2 w-2 h-2 bg-purple-500 rounded-full"></span>
+                </span>
               </Link>
-              <Link href="/contact">
-                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
-                  <span className="relative">
-                    Contact
-                    <span className="absolute -top-1 -right-2 w-2 h-2 bg-green-500 rounded-full"></span>
-                  </span>
-                </a>
+              <Link href="/contact" className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
+                <span className="relative">
+                  Contact
+                  <span className="absolute -top-1 -right-2 w-2 h-2 bg-green-500 rounded-full"></span>
+                </span>
               </Link>
               <Link href="/intake">
-                <a>
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Get Free Quote
-                  </Button>
-                </a>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Get Free Quote
+                </Button>
               </Link>
             </nav>
 
