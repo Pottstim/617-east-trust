@@ -1,242 +1,230 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "wouter";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    serviceInterest: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Handle form submission
+  };
+
+  const handleChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your journey toward financial prosperity? We're here to help.
-          </p>
-        </div>
-      </section>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-blue-green text-white py-20">
+          <div className="container max-w-4xl text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
+            <p className="text-xl text-blue-50">
+              Ready to achieve your goals? Contact us today for a free consultation.
+            </p>
+          </div>
+        </section>
 
-      {/* Contact Options */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              <Card className="hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <CardTitle className="text-2xl">Schedule a Consultation</CardTitle>
-                  <CardDescription className="text-base">
-                    Complete our intake form to schedule a personalized consultation with our team.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link href="/intake">
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      Start Intake Form
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                    <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <CardTitle className="text-2xl">Visit Our Office</CardTitle>
-                  <CardDescription className="text-base">
-                    We're located in the heart of the North Carolina Sandhills.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">
-                    <strong>617 East Trust</strong><br />
-                    North Carolina Sandhills Region
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    By appointment only. Please schedule through our intake form.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  We're Here to Help
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Have questions? We're committed to providing clear, transparent communication.
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="container max-w-6xl">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Contact Info */}
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Achieve Your Goals?</h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Get a free quote and discover how we can help you launch, grow, and succeed.
                 </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">📞</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Phone</div>
+                      <a href="tel:9103151800" className="text-blue-600 hover:underline">(910) 315-1800</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">✉️</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Email</div>
+                      <a href="mailto:info@617east.com" className="text-blue-600 hover:underline">info@617east.com</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">📍</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Location</div>
+                      <div className="text-gray-600">North Carolina, USA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <Card className="p-6 bg-blue-50 border-blue-200">
+                  <h3 className="font-semibold text-gray-900 mb-2">Response Time Guarantee</h3>
+                  <p className="text-gray-600 text-sm">
+                    Expect a response within 24 hours. Same-day response for inquiries received before 3 PM EST.
+                  </p>
+                </Card>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Email Us</h3>
-                  <p className="text-gray-600 text-sm">
-                    Response within 24 hours
-                  </p>
-                </div>
+              {/* Contact Form */}
+              <Card className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
+                <p className="text-gray-600 mb-6">Tell us about your needs and we'll provide a customized solution</p>
 
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        placeholder="John"
+                        required
+                        className="mt-1"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        placeholder="Doe"
+                        required
+                        className="mt-1"
+                      />
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
-                  <p className="text-gray-600 text-sm">
-                    Available during business hours
-                  </p>
-                </div>
 
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      required
+                      className="mt-1"
+                    />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Schedule Online</h3>
-                  <p className="text-gray-600 text-sm">
-                    Book a consultation anytime
-                  </p>
-                </div>
-              </div>
+
+                  <div>
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="(555) 123-4567"
+                      required
+                      className="mt-1"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="serviceInterest">Service Interest</Label>
+                    <select
+                      id="serviceInterest"
+                      name="serviceInterest"
+                      value={formData.serviceInterest}
+                      onChange={handleChange}
+                      required
+                      className="w-full mt-1 p-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="business">Business Services</option>
+                      <option value="consumer">Consumer Services</option>
+                      <option value="both">Both</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your needs..."
+                      className="mt-1 min-h-[120px]"
+                    />
+                  </div>
+
+                  <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-lg">
+                    Submit Request
+                  </Button>
+                </form>
+              </Card>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Business Hours */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Business Hours</CardTitle>
-                <CardDescription className="text-center">
-                  We're available to serve you during the following hours
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b">
-                    <span className="font-medium text-gray-900">Monday - Friday</span>
-                    <span className="text-gray-600">9:00 AM - 5:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b">
-                    <span className="font-medium text-gray-900">Saturday</span>
-                    <span className="text-gray-600">By Appointment Only</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="font-medium text-gray-900">Sunday</span>
-                    <span className="text-gray-600">Closed</span>
-                  </div>
-                </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-gray-700 text-center">
-                    <strong>Note:</strong> All consultations are by appointment. Please use our intake form to schedule your visit.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-600">
-                Quick answers to common questions
-              </p>
-            </div>
-
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">How do I get started?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">
-                    Simply complete our intake form to schedule your free initial consultation. We'll review your information and reach out to schedule a meeting at your convenience.
-                  </p>
-                </CardContent>
+              <Card className="p-6">
+                <h3 className="font-bold text-gray-900 mb-2">How quickly can you register my business?</h3>
+                <p className="text-gray-600">We offer same-day business registration services. In most cases, your business will be registered and ready to operate within 24 hours.</p>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What should I bring to my first consultation?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">
-                    We'll provide a detailed checklist after you schedule your appointment. Generally, bring any relevant financial documents, business plans, or questions you'd like to discuss.
-                  </p>
-                </CardContent>
+              <Card className="p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Do you help with SBA funding applications?</h3>
+                <p className="text-gray-600">Yes! We provide direct connections to SBA funding opportunities and guide you through the entire application process.</p>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Do you offer virtual consultations?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">
-                    Yes! We offer both in-person and virtual consultations to accommodate your schedule and preferences. Indicate your preference in the intake form.
-                  </p>
-                </CardContent>
+              <Card className="p-6">
+                <h3 className="font-bold text-gray-900 mb-2">What's included in your website development service?</h3>
+                <p className="text-gray-600">Our website development includes design, development, SEO optimization, mobile responsiveness, and deployment. We create professional websites that convert visitors into customers.</p>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What areas do you serve?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">
-                    While we're based in the North Carolina Sandhills, we serve clients throughout North Carolina and beyond through our virtual consultation services.
-                  </p>
-                </CardContent>
+              <Card className="p-6">
+                <h3 className="font-bold text-gray-900 mb-2">How does credit repair work?</h3>
+                <p className="text-gray-600">We work with credit bureaus to identify and remove inaccurate items from your credit report, while helping you build positive credit history through strategic planning.</p>
+              </Card>
+
+              <Card className="p-6">
+                <h3 className="font-bold text-gray-900 mb-2">What areas do you serve?</h3>
+                <p className="text-gray-600">While we're based in North Carolina, we serve clients nationwide for most of our services, including business registration, credit repair, and consulting.</p>
               </Card>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Take the Next Step?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Start your journey toward financial prosperity today.
-          </p>
-          <Link href="/intake">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-              Complete Intake Form
-            </Button>
-          </Link>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 }

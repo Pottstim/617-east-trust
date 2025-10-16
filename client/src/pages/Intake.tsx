@@ -63,7 +63,6 @@ export default function Intake() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
     
     // Clear saved progress
@@ -87,7 +86,7 @@ export default function Intake() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-purple-700">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-green-500">
       <div className="container max-w-2xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="bg-white rounded-t-3xl p-8 text-center shadow-xl">
@@ -99,9 +98,9 @@ export default function Intake() {
         </div>
 
         {/* Progress Bar */}
-        <div className="bg-gray-200 h-1">
+        <div className="bg-gray-200 h-1.5">
           <div 
-            className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300"
+            className="h-full bg-gradient-to-r from-blue-600 to-green-600 transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -492,7 +491,7 @@ export default function Intake() {
                 </p>
                 <Button
                   onClick={() => window.location.href = "/"}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
                 >
                   Return to Home
                 </Button>
@@ -516,7 +515,7 @@ export default function Intake() {
                   <Button
                     type="button"
                     onClick={handleNext}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
                   >
                     Continue
                   </Button>
@@ -524,7 +523,7 @@ export default function Intake() {
                 {currentStep === totalSteps && (
                   <Button
                     type="submit"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
                   >
                     Submit Application
                   </Button>

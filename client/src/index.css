@@ -43,7 +43,7 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
+  --primary: var(--color-blue-600);
   --primary-foreground: var(--color-blue-50);
   --sidebar-primary: var(--color-blue-600);
   --sidebar-primary-foreground: var(--color-blue-50);
@@ -134,6 +134,20 @@
 }
 
 @layer components {
+  /* Custom gradients for 617 East Trust */
+  .gradient-blue-green {
+    background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  }
+  
+  .gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+  
+  .gradient-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  }
+
+
   /**
    * Custom container utility that centers content and adds responsive padding.
    *
