@@ -82,11 +82,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold text-lg mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/services"><a className="hover:text-white transition-colors">Business Registration</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-white transition-colors">SBA Funding</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-white transition-colors">Website Development</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-white transition-colors">Credit Building</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-white transition-colors">Marketing & SEO</a></Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Business Registration</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">SBA Funding</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Website Development</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Credit Building</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Marketing & SEO</Link></li>
               </ul>
             </div>
 
@@ -94,10 +94,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold text-lg mb-4">Company</h3>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/"><a className="hover:text-white transition-colors">About Us</a></Link></li>
-                <li><Link href="/testimonials"><a className="hover:text-white transition-colors">Testimonials</a></Link></li>
-                <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact</a></Link></li>
-                <li><Link href="/intake"><a className="hover:text-white transition-colors">Get Started</a></Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/intake" className="hover:text-white transition-colors">Get Started</Link></li>
               </ul>
             </div>
 
