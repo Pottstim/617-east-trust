@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -60,16 +61,51 @@ export default function Intake() {
     }
   };
 
+  const submitMutation = trpc.intake.submit.useMutation({
+    onSuccess: () => {
+      // Clear saved progress
+      localStorage.removeItem("intakeFormProgress");
+      // Show success step
+      setCurrentStep(totalSteps + 1);
+    },
+    onError: (error) => {
+      console.error("Submission error:", error);
+      alert("There was an error submitting your form. Please try again.");
+    },
+  });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    console.log("Form submitted:", formData);
+    // Prepare data for submission
+    const submissionData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      businessName: formData.businessName,
+      businessStructure: formData.businessStructure,
+      industry: formData.industry,
+      employeeCount: formData.employeeCount,
+      currentRevenue: formData.currentRevenue,
+      hasWebsite: formData.hasWebsite,
+      hasSocialMedia: formData.hasSocialMedia,
+      selectedServices: JSON.stringify(formData.services || []),
+      primaryGoal: formData.primaryGoal,
+      timeline: formData.timeline,
+      budget: formData.budget,
+      priorityRatings: JSON.stringify({
+        growth: formData.growth,
+        funding: formData.funding,
+        marketing: formData.marketing,
+        operations: formData.operations,
+      }),
+      preferredContact: formData.preferredContact,
+      bestTimeToCall: formData.bestTimeToCall,
+      additionalInfo: formData.additionalInfo,
+    };
     
-    // Clear saved progress
-    localStorage.removeItem("intakeFormProgress");
-    
-    // Show success step
-    setCurrentStep(totalSteps + 1);
+    submitMutation.mutate(submissionData);
   };
 
   const toggleService = (service: string) => {

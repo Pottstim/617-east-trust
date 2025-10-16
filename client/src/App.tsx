@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Intake from "./pages/Intake";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
