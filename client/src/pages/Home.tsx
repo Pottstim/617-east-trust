@@ -114,14 +114,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Business Services */}
-            <Card className="p-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white">
+            <Card className="p-8 border-2 border-blue-500 bg-gradient-to-br from-blue-900 to-blue-800">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl">
                   🏢
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground">Business Services</h3>
-                  <p className="text-sm text-muted-foreground">Complete business formation and growth solutions</p>
+                  <h3 className="text-2xl font-bold text-white">Business Services</h3>
+                  <p className="text-sm text-blue-100">Complete business formation and growth solutions</p>
                 </div>
               </div>
               <ul className="space-y-4">
@@ -129,8 +129,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Same-Day Business Registration</div>
-                      <div className="text-sm text-muted-foreground">Get your business registered and ready to operate in just 24 hours</div>
+                      <div className="font-semibold text-white">Same-Day Business Registration</div>
+                      <div className="text-sm text-blue-100">Get your business registered and ready to operate in just 24 hours</div>
                     </div>
                   </div>
                 </li>
@@ -138,8 +138,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">SBA Funding Connections</div>
-                      <div className="text-sm text-muted-foreground">Direct access to SBA funding opportunities and application support</div>
+                      <div className="font-semibold text-white">SBA Funding Connections</div>
+                      <div className="text-sm text-blue-100">Direct access to SBA funding opportunities and application support</div>
                     </div>
                   </div>
                 </li>
@@ -147,8 +147,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Website Development</div>
-                      <div className="text-sm text-muted-foreground">Professional websites that drive growth and customer engagement</div>
+                      <div className="font-semibold text-white">Website Development</div>
+                      <div className="text-sm text-blue-100">Professional websites that drive growth and customer engagement</div>
                     </div>
                   </div>
                 </li>
@@ -156,8 +156,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Business Credit Building</div>
-                      <div className="text-sm text-muted-foreground">Establish and build strong business credit profiles</div>
+                      <div className="font-semibold text-white">Business Credit Building</div>
+                      <div className="text-sm text-blue-100">Establish and build strong business credit profiles</div>
                     </div>
                   </div>
                 </li>
@@ -165,8 +165,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Marketing & SEO</div>
-                      <div className="text-sm text-muted-foreground">Comprehensive marketing strategies to gain exposure and customers</div>
+                      <div className="font-semibold text-white">Marketing & SEO</div>
+                      <div className="text-sm text-blue-100">Comprehensive marketing strategies to gain exposure and customers</div>
                     </div>
                   </div>
                 </li>
@@ -179,14 +179,14 @@ export default function Home() {
             </Card>
 
             {/* Consumer Services */}
-            <Card className="p-8 border-2 border-green-200 bg-gradient-to-br from-green-50 to-white">
+            <Card className="p-8 border-2 border-green-500 bg-gradient-to-br from-green-900 to-green-800">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white text-2xl">
                   💼
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground">Consumer Services</h3>
-                  <p className="text-sm text-muted-foreground">Personal financial assistance and life consulting</p>
+                  <h3 className="text-2xl font-bold text-white">Consumer Services</h3>
+                  <p className="text-sm text-green-100">Personal financial assistance and life consulting</p>
                 </div>
               </div>
               <ul className="space-y-4">
@@ -194,8 +194,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Credit Repair</div>
-                      <div className="text-sm text-muted-foreground">Professional credit repair services to improve your financial standing</div>
+                      <div className="font-semibold text-white">Credit Repair</div>
+                      <div className="text-sm text-green-100">Professional credit repair services to improve your financial standing</div>
                     </div>
                   </div>
                 </li>
@@ -203,8 +203,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Life Consulting</div>
-                      <div className="text-sm text-muted-foreground">Personal guidance and strategic planning for life goals</div>
+                      <div className="font-semibold text-white">Life Consulting</div>
+                      <div className="text-sm text-green-100">Personal guidance and strategic planning for life goals</div>
                     </div>
                   </div>
                 </li>
@@ -212,8 +212,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Task Assistance</div>
-                      <div className="text-sm text-muted-foreground">Help with tedious tasks and administrative work</div>
+                      <div className="font-semibold text-white">Task Assistance</div>
+                      <div className="text-sm text-green-100">Help with tedious tasks and administrative work</div>
                     </div>
                   </div>
                 </li>
@@ -221,8 +221,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Financial Wellness</div>
-                      <div className="text-sm text-muted-foreground">Comprehensive financial planning and wellness strategies</div>
+                      <div className="font-semibold text-white">Financial Wellness</div>
+                      <div className="text-sm text-green-100">Comprehensive financial planning and wellness strategies</div>
                     </div>
                   </div>
                 </li>
