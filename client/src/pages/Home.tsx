@@ -7,17 +7,17 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-background py-20">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 ✨ Same-Day Business Registration
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-5xl font-bold text-foreground mb-4">
                 Launch, Grow, <span className="text-blue-600">Succeed</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-muted-foreground mb-8">
                 Your end-to-end partner for business & financial empowerment. Leveraging banking acumen and technological prowess to empower new entrepreneurs and consumers.
               </p>
               <div className="flex gap-4">
@@ -35,15 +35,15 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-6 mt-8">
                 <div className="flex items-center gap-2 text-sm">
                   <Check className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700">Same-Day Registration</span>
+                  <span className="text-foreground">Same-Day Registration</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Check className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700">SBA Funding Connections</span>
+                  <span className="text-foreground">SBA Funding Connections</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Check className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700">End-to-End Support</span>
+                  <span className="text-foreground">End-to-End Support</span>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 bg-white border-y">
+      <section className="py-12 bg-card border-y">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -70,7 +70,7 @@ export default function Home() {
                   <Award className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
-              <div className="font-semibold text-gray-900">Banking Expertise</div>
+              <div className="font-semibold text-foreground">Banking Expertise</div>
             </div>
             <div>
               <div className="flex justify-center mb-2">
@@ -78,7 +78,7 @@ export default function Home() {
                   <Zap className="w-6 h-6 text-green-600" />
                 </div>
               </div>
-              <div className="font-semibold text-gray-900">Same-Day Service</div>
+              <div className="font-semibold text-foreground">Same-Day Service</div>
             </div>
             <div>
               <div className="flex justify-center mb-2">
@@ -86,7 +86,7 @@ export default function Home() {
                   <Award className="w-6 h-6 text-yellow-600" />
                 </div>
               </div>
-              <div className="font-semibold text-gray-900">SBA Connected</div>
+              <div className="font-semibold text-foreground">SBA Connected</div>
             </div>
             <div>
               <div className="flex justify-center mb-2">
@@ -94,20 +94,20 @@ export default function Home() {
                   <Users className="w-6 h-6 text-purple-600" />
                 </div>
               </div>
-              <div className="font-semibold text-gray-900">End-to-End Support</div>
+              <div className="font-semibold text-foreground">End-to-End Support</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               Comprehensive Business & Consumer Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From business formation to funding, marketing to expansion - we provide complete support for your journey.
             </p>
           </div>
@@ -120,8 +120,8 @@ export default function Home() {
                   🏢
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Business Services</h3>
-                  <p className="text-sm text-gray-600">Complete business formation and growth solutions</p>
+                  <h3 className="text-2xl font-bold text-foreground">Business Services</h3>
+                  <p className="text-sm text-muted-foreground">Complete business formation and growth solutions</p>
                 </div>
               </div>
               <ul className="space-y-4">
@@ -129,8 +129,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Same-Day Business Registration</div>
-                      <div className="text-sm text-gray-600">Get your business registered and ready to operate in just 24 hours</div>
+                      <div className="font-semibold text-foreground">Same-Day Business Registration</div>
+                      <div className="text-sm text-muted-foreground">Get your business registered and ready to operate in just 24 hours</div>
                     </div>
                   </div>
                 </li>
@@ -138,8 +138,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">SBA Funding Connections</div>
-                      <div className="text-sm text-gray-600">Direct access to SBA funding opportunities and application support</div>
+                      <div className="font-semibold text-foreground">SBA Funding Connections</div>
+                      <div className="text-sm text-muted-foreground">Direct access to SBA funding opportunities and application support</div>
                     </div>
                   </div>
                 </li>
@@ -147,8 +147,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Website Development</div>
-                      <div className="text-sm text-gray-600">Professional websites that drive growth and customer engagement</div>
+                      <div className="font-semibold text-foreground">Website Development</div>
+                      <div className="text-sm text-muted-foreground">Professional websites that drive growth and customer engagement</div>
                     </div>
                   </div>
                 </li>
@@ -156,8 +156,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Business Credit Building</div>
-                      <div className="text-sm text-gray-600">Establish and build strong business credit profiles</div>
+                      <div className="font-semibold text-foreground">Business Credit Building</div>
+                      <div className="text-sm text-muted-foreground">Establish and build strong business credit profiles</div>
                     </div>
                   </div>
                 </li>
@@ -165,8 +165,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Marketing & SEO</div>
-                      <div className="text-sm text-gray-600">Comprehensive marketing strategies to gain exposure and customers</div>
+                      <div className="font-semibold text-foreground">Marketing & SEO</div>
+                      <div className="text-sm text-muted-foreground">Comprehensive marketing strategies to gain exposure and customers</div>
                     </div>
                   </div>
                 </li>
@@ -185,8 +185,8 @@ export default function Home() {
                   💼
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Consumer Services</h3>
-                  <p className="text-sm text-gray-600">Personal financial assistance and life consulting</p>
+                  <h3 className="text-2xl font-bold text-foreground">Consumer Services</h3>
+                  <p className="text-sm text-muted-foreground">Personal financial assistance and life consulting</p>
                 </div>
               </div>
               <ul className="space-y-4">
@@ -194,8 +194,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Credit Repair</div>
-                      <div className="text-sm text-gray-600">Professional credit repair services to improve your financial standing</div>
+                      <div className="font-semibold text-foreground">Credit Repair</div>
+                      <div className="text-sm text-muted-foreground">Professional credit repair services to improve your financial standing</div>
                     </div>
                   </div>
                 </li>
@@ -203,8 +203,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Life Consulting</div>
-                      <div className="text-sm text-gray-600">Personal guidance and strategic planning for life goals</div>
+                      <div className="font-semibold text-foreground">Life Consulting</div>
+                      <div className="text-sm text-muted-foreground">Personal guidance and strategic planning for life goals</div>
                     </div>
                   </div>
                 </li>
@@ -212,8 +212,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Task Assistance</div>
-                      <div className="text-sm text-gray-600">Help with tedious tasks and administrative work</div>
+                      <div className="font-semibold text-foreground">Task Assistance</div>
+                      <div className="text-sm text-muted-foreground">Help with tedious tasks and administrative work</div>
                     </div>
                   </div>
                 </li>
@@ -221,8 +221,8 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-gray-900">Financial Wellness</div>
-                      <div className="text-sm text-gray-600">Comprehensive financial planning and wellness strategies</div>
+                      <div className="font-semibold text-foreground">Financial Wellness</div>
+                      <div className="text-sm text-muted-foreground">Comprehensive financial planning and wellness strategies</div>
                     </div>
                   </div>
                 </li>
@@ -256,7 +256,7 @@ export default function Home() {
             </div>
           </div>
           <a href="/intake">
-            <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold">
+            <Button className="bg-card text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold">
               Get Your Free Quote →
             </Button>
           </a>

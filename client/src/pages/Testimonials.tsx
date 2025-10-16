@@ -50,7 +50,7 @@ export default function Testimonials() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-blue-green text-white py-20">
           <div className="container max-w-4xl text-center">
@@ -72,14 +72,14 @@ export default function Testimonials() {
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
+                  <p className="text-foreground mb-6 leading-relaxed">"{testimonial.text}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl">
                       {testimonial.icon}
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.role}</div>
+                      <div className="font-semibold text-foreground">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                     </div>
                   </div>
                 </Card>
@@ -89,12 +89,12 @@ export default function Testimonials() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-card">
           <div className="container max-w-4xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Join hundreds of satisfied clients who have achieved their business and financial goals with 617 East Trust.
             </p>
             <a

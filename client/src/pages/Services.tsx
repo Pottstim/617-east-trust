@@ -62,7 +62,7 @@ export default function Services() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-blue-green text-white py-20">
           <div className="container max-w-4xl text-center">
@@ -81,16 +81,16 @@ export default function Services() {
                 <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   For Businesses
                 </div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Business Services</h2>
-                <p className="text-xl text-gray-600">Complete business formation and growth solutions</p>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Business Services</h2>
+                <p className="text-xl text-muted-foreground">Complete business formation and growth solutions</p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {businessServices.map((service, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-2 border-blue-100 hover:border-blue-300">
                     <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                   </Card>
                 ))}
               </div>
@@ -107,23 +107,23 @@ export default function Services() {
         </section>
 
         {/* Consumer Services */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <div className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   For Individuals
                 </div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Consumer Services</h2>
-                <p className="text-xl text-gray-600">Personal financial assistance and life consulting</p>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Consumer Services</h2>
+                <p className="text-xl text-muted-foreground">Personal financial assistance and life consulting</p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {consumerServices.map((service, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-2 border-green-100 hover:border-green-300">
                     <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                   </Card>
                 ))}
               </div>
@@ -140,9 +140,9 @@ export default function Services() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-background">
           <div className="container max-w-4xl">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Why Choose 617 East Trust?</h2>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Why Choose 617 East Trust?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -151,8 +151,8 @@ export default function Services() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Banking Expertise</h3>
-                  <p className="text-gray-600">Founded by a banking professional with a decade of experience.</p>
+                  <h3 className="font-bold text-foreground mb-2">Banking Expertise</h3>
+                  <p className="text-muted-foreground">Founded by a banking professional with a decade of experience.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -162,8 +162,8 @@ export default function Services() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Same-Day Service</h3>
-                  <p className="text-gray-600">Get your business registered in 24 hours, not weeks.</p>
+                  <h3 className="font-bold text-foreground mb-2">Same-Day Service</h3>
+                  <p className="text-muted-foreground">Get your business registered in 24 hours, not weeks.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -173,8 +173,8 @@ export default function Services() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Technology Integration</h3>
-                  <p className="text-gray-600">Traditional service with cutting-edge technology.</p>
+                  <h3 className="font-bold text-foreground mb-2">Technology Integration</h3>
+                  <p className="text-muted-foreground">Traditional service with cutting-edge technology.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -184,8 +184,8 @@ export default function Services() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">End-to-End Support</h3>
-                  <p className="text-gray-600">From formation to funding - we're with you every step.</p>
+                  <h3 className="font-bold text-foreground mb-2">End-to-End Support</h3>
+                  <p className="text-muted-foreground">From formation to funding - we're with you every step.</p>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Services() {
               Schedule a free consultation and discover how we can help you achieve your goals.
             </p>
             <a href="/intake">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold">
+              <Button className="bg-card text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold">
                 Get Your Free Quote →
               </Button>
             </a>

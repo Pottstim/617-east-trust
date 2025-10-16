@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-blue-green text-white py-20">
           <div className="container max-w-4xl text-center">
@@ -48,8 +48,8 @@ export default function Contact() {
             <div className="grid md:grid-cols-2 gap-12">
               {/* Contact Info */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Achieve Your Goals?</h2>
-                <p className="text-lg text-gray-600 mb-8">
+                <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Achieve Your Goals?</h2>
+                <p className="text-lg text-muted-foreground mb-8">
                   Get a free quote and discover how we can help you launch, grow, and succeed.
                 </p>
 
@@ -59,7 +59,7 @@ export default function Contact() {
                       <span className="text-2xl">📞</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Phone</div>
+                      <div className="font-semibold text-foreground">Phone</div>
                       <a href="tel:9103151800" className="text-blue-600 hover:underline">(910) 315-1800</a>
                     </div>
                   </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                       <span className="text-2xl">✉️</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Email</div>
+                      <div className="font-semibold text-foreground">Email</div>
                       <a href="mailto:info@617east.com" className="text-blue-600 hover:underline">info@617east.com</a>
                     </div>
                   </div>
@@ -79,15 +79,15 @@ export default function Contact() {
                       <span className="text-2xl">📍</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Location</div>
-                      <div className="text-gray-600">North Carolina, USA</div>
+                      <div className="font-semibold text-foreground">Location</div>
+                      <div className="text-muted-foreground">North Carolina, USA</div>
                     </div>
                   </div>
                 </div>
 
                 <Card className="p-6 bg-blue-50 border-blue-200">
-                  <h3 className="font-semibold text-gray-900 mb-2">Response Time Guarantee</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-semibold text-foreground mb-2">Response Time Guarantee</h3>
+                  <p className="text-muted-foreground text-sm">
                     Expect a response within 24 hours. Same-day response for inquiries received before 3 PM EST.
                   </p>
                 </Card>
@@ -95,8 +95,8 @@ export default function Contact() {
 
               {/* Contact Form */}
               <Card className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
-                <p className="text-gray-600 mb-6">Tell us about your needs and we'll provide a customized solution</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Get Your Free Quote</h3>
+                <p className="text-muted-foreground mb-6">Tell us about your needs and we'll provide a customized solution</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
@@ -193,33 +193,33 @@ export default function Contact() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container max-w-4xl">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <Card className="p-6">
-                <h3 className="font-bold text-gray-900 mb-2">How quickly can you register my business?</h3>
-                <p className="text-gray-600">We offer same-day business registration services. In most cases, your business will be registered and ready to operate within 24 hours.</p>
+                <h3 className="font-bold text-foreground mb-2">How quickly can you register my business?</h3>
+                <p className="text-muted-foreground">We offer same-day business registration services. In most cases, your business will be registered and ready to operate within 24 hours.</p>
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-bold text-gray-900 mb-2">Do you help with SBA funding applications?</h3>
-                <p className="text-gray-600">Yes! We provide direct connections to SBA funding opportunities and guide you through the entire application process.</p>
+                <h3 className="font-bold text-foreground mb-2">Do you help with SBA funding applications?</h3>
+                <p className="text-muted-foreground">Yes! We provide direct connections to SBA funding opportunities and guide you through the entire application process.</p>
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-bold text-gray-900 mb-2">What's included in your website development service?</h3>
-                <p className="text-gray-600">Our website development includes design, development, SEO optimization, mobile responsiveness, and deployment. We create professional websites that convert visitors into customers.</p>
+                <h3 className="font-bold text-foreground mb-2">What's included in your website development service?</h3>
+                <p className="text-muted-foreground">Our website development includes design, development, SEO optimization, mobile responsiveness, and deployment. We create professional websites that convert visitors into customers.</p>
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-bold text-gray-900 mb-2">How does credit repair work?</h3>
-                <p className="text-gray-600">We work with credit bureaus to identify and remove inaccurate items from your credit report, while helping you build positive credit history through strategic planning.</p>
+                <h3 className="font-bold text-foreground mb-2">How does credit repair work?</h3>
+                <p className="text-muted-foreground">We work with credit bureaus to identify and remove inaccurate items from your credit report, while helping you build positive credit history through strategic planning.</p>
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-bold text-gray-900 mb-2">What areas do you serve?</h3>
-                <p className="text-gray-600">While we're based in North Carolina, we serve clients nationwide for most of our services, including business registration, credit repair, and consulting.</p>
+                <h3 className="font-bold text-foreground mb-2">What areas do you serve?</h3>
+                <p className="text-muted-foreground">While we're based in North Carolina, we serve clients nationwide for most of our services, including business registration, credit repair, and consulting.</p>
               </Card>
             </div>
           </div>

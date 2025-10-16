@@ -89,12 +89,12 @@ export default function Intake() {
     <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-green-500">
       <div className="container max-w-2xl mx-auto px-4 py-8">
         {/* Header */}
-        <div className="bg-white rounded-t-3xl p-8 text-center shadow-xl">
+        <div className="bg-card rounded-t-3xl p-8 text-center shadow-xl">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src="/logo-nc.png" alt="617 East Trust" className="h-12 w-12" />
-            <div className="text-2xl font-bold text-gray-900">617 EAST TRUST</div>
+            <div className="text-2xl font-bold text-foreground">617 EAST TRUST</div>
           </div>
-          <p className="text-gray-600">Professional Business Consulting & Advisory Services</p>
+          <p className="text-muted-foreground">Professional Business Consulting & Advisory Services</p>
         </div>
 
         {/* Progress Bar */}
@@ -106,14 +106,14 @@ export default function Intake() {
         </div>
 
         {/* Form Container */}
-        <div className="bg-white rounded-b-3xl shadow-xl p-8 mb-8">
+        <div className="bg-card rounded-b-3xl shadow-xl p-8 mb-8">
           <form onSubmit={handleSubmit}>
             {/* Step 1: Getting Started */}
             {currentStep === 1 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">Let's Get Started! 🚀</h2>
-                  <p className="text-gray-600">Welcome! We're excited to learn about your business and how we can help you succeed.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">Let's Get Started! 🚀</h2>
+                  <p className="text-muted-foreground">Welcome! We're excited to learn about your business and how we can help you succeed.</p>
                 </div>
 
                 <div className="space-y-4">
@@ -174,8 +174,8 @@ export default function Intake() {
             {currentStep === 2 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">About Your Business 🏢</h2>
-                  <p className="text-gray-600">Help us understand your business structure and background.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">About Your Business 🏢</h2>
+                  <p className="text-muted-foreground">Help us understand your business structure and background.</p>
                 </div>
 
                 <div className="space-y-4">
@@ -253,8 +253,8 @@ export default function Intake() {
             {currentStep === 3 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">Current Status 📊</h2>
-                  <p className="text-gray-600">Tell us about your current business situation.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">Current Status 📊</h2>
+                  <p className="text-muted-foreground">Tell us about your current business situation.</p>
                 </div>
 
                 <div className="space-y-4">
@@ -315,8 +315,8 @@ export default function Intake() {
             {currentStep === 4 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">What You Need 🎯</h2>
-                  <p className="text-gray-600">Select all the services you're interested in.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">What You Need 🎯</h2>
+                  <p className="text-muted-foreground">Select all the services you're interested in.</p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
@@ -342,8 +342,8 @@ export default function Intake() {
                       <div className="flex items-start gap-4">
                         <div className="text-3xl">{service.icon}</div>
                         <div className="flex-1">
-                          <h3 className="font-semibold text-gray-900 mb-1">{service.title}</h3>
-                          <p className="text-sm text-gray-600">{service.desc}</p>
+                          <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
+                          <p className="text-sm text-muted-foreground">{service.desc}</p>
                         </div>
                       </div>
                     </Card>
@@ -356,8 +356,8 @@ export default function Intake() {
             {currentStep === 5 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">Your Vision ✨</h2>
-                  <p className="text-gray-600">Help us understand your goals so we can create the perfect roadmap for your success.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">Your Vision ✨</h2>
+                  <p className="text-muted-foreground">Help us understand your goals so we can create the perfect roadmap for your success.</p>
                 </div>
 
                 <div className="space-y-4">
@@ -395,7 +395,7 @@ export default function Intake() {
                         { field: "priorityDigital", label: "📱 Digital Presence" },
                       ].map((priority) => (
                         <div key={priority.field} className="flex items-center justify-between">
-                          <span className="text-gray-700">{priority.label}</span>
+                          <span className="text-foreground">{priority.label}</span>
                           <div className="flex gap-2">
                             {[1, 2, 3, 4, 5].map((value) => (
                               <button
@@ -405,7 +405,7 @@ export default function Intake() {
                                 className={`w-10 h-10 rounded-full border-2 font-semibold transition-all ${
                                   formData[priority.field] === value
                                     ? "bg-blue-600 text-white border-blue-600"
-                                    : "border-gray-300 text-gray-600 hover:border-blue-600"
+                                    : "border-gray-300 text-muted-foreground hover:border-blue-600"
                                 }`}
                               >
                                 {value}
@@ -424,8 +424,8 @@ export default function Intake() {
             {currentStep === 6 && (
               <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">Almost Done! 🎉</h2>
-                  <p className="text-gray-600">Just a few more details and we'll be in touch.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-2">Almost Done! 🎉</h2>
+                  <p className="text-muted-foreground">Just a few more details and we'll be in touch.</p>
                 </div>
 
                 <div className="space-y-4">
@@ -482,11 +482,11 @@ export default function Intake() {
             {currentStep === 7 && (
               <div className="text-center py-12 animate-in fade-in zoom-in duration-500">
                 <div className="text-6xl mb-6">✅</div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <h2 className="text-3xl font-bold text-foreground mb-4">Thank You!</h2>
+                <p className="text-lg text-muted-foreground mb-6">
                   Your intake form has been successfully submitted. We'll review your information and get back to you within 24-48 hours.
                 </p>
-                <p className="text-gray-600 mb-8">
+                <p className="text-muted-foreground mb-8">
                   Check your email for a confirmation and next steps.
                 </p>
                 <Button

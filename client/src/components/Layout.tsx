@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
+      <header className="bg-card border-b sticky top-0 z-50">
         <div className="container">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -13,8 +13,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                 <img src="/logo-nc.png" alt="617 East Trust" className="h-10 w-10" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-xl text-gray-900">617 EAST TRUST</span>
-                  <span className="text-xs text-gray-600">Accountability. Trust. Transparency.</span>
+                  <span className="font-bold text-xl text-foreground">617 EAST TRUST</span>
+                  <span className="text-xs text-muted-foreground">Accountability. Trust. Transparency.</span>
                 </div>
               </a>
             </Link>
@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               <Link href="/">
-                <a className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
                   <span className="relative">
                     Home
                     <span className="absolute -top-1 -right-2 w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </Link>
               <Link href="/services">
-                <a className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
                   <span className="relative">
                     Services
                     <span className="absolute -top-1 -right-2 w-2 h-2 bg-yellow-500 rounded-full"></span>
@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </Link>
               <Link href="/testimonials">
-                <a className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
                   <span className="relative">
                     Testimonials
                     <span className="absolute -top-1 -right-2 w-2 h-2 bg-purple-500 rounded-full"></span>
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a className="relative text-foreground hover:text-blue-600 font-medium transition-colors">
                   <span className="relative">
                     Contact
                     <span className="absolute -top-1 -right-2 w-2 h-2 bg-green-500 rounded-full"></span>
