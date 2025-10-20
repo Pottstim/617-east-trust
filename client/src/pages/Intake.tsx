@@ -154,11 +154,11 @@ export default function Intake() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="companyName">Company/Business Name *</Label>
+                    <Label htmlFor="businessName">Company/Business Name *</Label>
                     <Input
-                      id="companyName"
-                      name="companyName"
-                      value={formData.companyName || ""}
+                      id="businessName"
+                      name="businessName"
+                      value={formData.businessName || ""}
                       onChange={handleInputChange}
                       required
                       className="mt-1"
@@ -166,11 +166,23 @@ export default function Intake() {
                   </div>
 
                   <div>
-                    <Label htmlFor="contactName">Primary Contact Name *</Label>
+                    <Label htmlFor="firstName">First Name *</Label>
                     <Input
-                      id="contactName"
-                      name="contactName"
-                      value={formData.contactName || ""}
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName || ""}
+                      onChange={handleInputChange}
+                      required
+                      className="mt-1"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName || ""}
                       onChange={handleInputChange}
                       required
                       className="mt-1"
